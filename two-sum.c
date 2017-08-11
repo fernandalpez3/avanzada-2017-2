@@ -10,6 +10,15 @@ int * getIndexes(int *nums, int len, int target)
     for(i=0;i<len;i++){
         candidate = nums[i];
         complement = target - candidate;
+        for(j = i +1; j<len;j++)
+        {
+            if(nums[j] == complement){
+                break;
+            }
+            if(nums[i]+ nums[j] == target){
+                break;
+            }
+        }
     }
 }
 
