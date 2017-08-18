@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "two-sum.h"
 
 int * getIndexes(int * nums, int len, int target)
 {
