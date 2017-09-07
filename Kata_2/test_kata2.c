@@ -18,8 +18,9 @@ static char * testUnit() {
   char* ransomNote= "c";
   char* magazine= "aab";
   int can = canConstruct(ransomNote,magazine);
+  int result = 0;
   printf("can construct %d", can);
-  muAssert("error, testUnit 1 != 1", 1 == 1);
+  muAssert("The letters in the ransomNote need to be in the magazine", can == 0);
   return 0;
 }
 

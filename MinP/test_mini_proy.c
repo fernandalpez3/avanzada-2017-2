@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "minunit.h"
-#include "calculate_days.h"
+#include "mini_proy.h"
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -15,25 +15,12 @@
 int testsRun = 0;
 
 static char * testUnit() {
-  Month month = Feb;
-  int year = 2017;
-  int monthDay = 20;
-  int expected = 20+31;
-  int result = calculateDays(month,monthDay,year);
-  muAssert("Number of days must be 20", expected == result);
-  return 0;
-}
-static char * testYear(){
-  int year = 2016;
-  int expected = 1;
-  int result = isLeapYear(year);
-  muAssert("2016 is leap", expected == result);
+  muAssert("error, testUnit 1 != 1", 1 == 1);
   return 0;
 }
 
 static char * allTests() {
   muRunTest(testUnit);
-  muRunTest(testYear);
   return 0;
 }
 
