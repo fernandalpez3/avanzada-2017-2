@@ -3,6 +3,15 @@
 #include <string.h>
 #include "mini_proy.h"
 
+/*************
+* Given two strings, deliver the character that is not equal to the others.
+* @param:
+* sum1,2: amount of characters in the array
+* i,j: character added in the string 
+* @return:
+* character that is different from the string
+*/
+
 char findTheDifference(char* s, char* t){
     //int arrS[128] = {0x00};
     //int arrT[128] = {0x00};

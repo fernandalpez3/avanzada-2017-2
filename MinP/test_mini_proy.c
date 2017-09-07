@@ -15,7 +15,11 @@
 int testsRun = 0;
 
 static char * testUnit() {
-  muAssert("error, testUnit 1 != 1", 1 == 1);
+  char* s = "abc";
+  char* t = "abcd";
+  char res = findTheDifference(s,t);
+  printf("%c", res);
+  muAssert("error, they are equal", res == 0);
   return 0;
 }
 
