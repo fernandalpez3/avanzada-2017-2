@@ -1,13 +1,14 @@
-typedef struct dictElement {
-    char *key;
-    void *value;
-} DictElement;
+typedef struct dict_element {
+    char * key;
+    void * value;
+} DictionaryElement;
 
 typedef struct dict {
-    DictElement *elements;
+    DictionaryElement * elements;
     unsigned int size;
-} Dict;
+    unsigned int used;
+} Dictionary;
 
-Dict * initDictionary(unsigned int,int *);
-void upsertDictionary(Dict *, char *,void *,int,int *);
-void * getDictionary(Dict *,char *, int, int *);
+Dictionary * init_dict(unsigned int,int *);
+void upsert_dict(Dictionary *, char *,void *,int,int *);
+void * get_dict(Dictionary *,char *, int, int *);
