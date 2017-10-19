@@ -12,6 +12,20 @@ proc reset {} {exec tput sgr0 > /dev/tty}
 #Put your test case here
 eval spawn [lrange $argv 0 end]
 
-expect "()" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
-expect "[]" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
-expect "{}" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
+#expect "Enter the characters:" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
+#send "()\r"
+#expect "1" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
+
+eval spawn [lrange $argv 0 end]
+
+#expect "Enter the characters:" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
+#send "[]\r"
+#expect "1" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
+
+eval spawn [lrange $argv 0 end]
+
+#expect "Enter the characters:" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
+#send "{}\r"
+#expect "1" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
+
+

@@ -16,14 +16,15 @@
 int testsRun = 0;
 
 static char * testUnit() {
-  char *s = "()";
+  char *s = "(]";
   bool res = isValid(s);
-  //if(res == 0){
-  //    printf("\nParenthesis is not valid");
-  //}else{
-    //  printf("\nParenthesis is valid");
-  //}
-  muAssert("error, Parenthesis must be equal", res == 0);
+  //printf("%d",res);
+  /*if(res == 0){
+      printf("\nParenthesis not isvalid");
+  }else{
+    printf("\nParenthesis is valid");
+  }*/
+  muAssert("error, Parenthesis must be equal", res == 1);
   return 0;
 }
 
