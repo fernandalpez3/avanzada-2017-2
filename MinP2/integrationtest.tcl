@@ -13,7 +13,6 @@ proc reset {} {exec tput sgr0 > /dev/tty}
 eval spawn [lrange $argv 0 end]
 
 expect "Hello from main" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
-
 #expect "What is the id:" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
 #send "0101\r"
 #expect "name: Angel Perez, semestre: 6" {foreground green; puts "PASSED";reset} default {foreground red;puts "FAILED";reset}
