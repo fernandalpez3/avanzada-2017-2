@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include "minunit.h"
-#include "minp2.h"
+#include "kata_5.h"
 
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
@@ -16,15 +15,7 @@
 int testsRun = 0;
 
 static char * testUnit() {
-  char *s = "()";
-  bool res = isValid(s);
-  //printf("%d",res);
-  /*if(res == 0){
-      printf("\nParenthesis not isvalid");
-  }else{
-    printf("\nParenthesis is valid");
-  }*/
-  muAssert("error, Parenthesis must be equal", res == 1);
+  muAssert("error, testUnit 1 != 1", 1 == 1);
   return 0;
 }
 
